@@ -12,19 +12,21 @@ height: 50px;
 const Title = styled.p`
 padding-top: 10px;
 padding-left: 5px;
-    font-size: 24px;
-    font-weight: bold;
+font-size: 36px;
+font-weight: bold;
+text-align: center;
+font-family: 'Grandstander', cursive;
 `
 
 
 
 const Heading = ({header}) =>  {
 return(
-    <Box>
+
 <Title>{header}</Title>
 
 
-    </Box>
+
 )
   
 
