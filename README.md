@@ -2,7 +2,11 @@
 
 Each day, come see a new astronomy picture or video from NASA's APOD API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run: 
+
+$ npm install
+
+$ npm start
 
 ## Available Scripts
 
