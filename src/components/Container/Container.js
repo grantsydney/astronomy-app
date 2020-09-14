@@ -4,12 +4,19 @@ import Heading from '../Heading/Heading'
 import Card from '../Card/Card'
 import ReactPlayer from "react-player"
 
-const CardContainer = styled.div`
+const CardContainer = styled.article`
+  @media screen and (max-width: 820px) {
+    width: 90%;
+  }
   width: 80%;
   margin: auto;
 `
 
 const Image = styled.img`
+  @media screen and (max-width: 820px) {
+    width: 100%;
+    height: auto;
+  }
   max-height: 700px;
   display: block;
   margin: auto;
