@@ -19,37 +19,36 @@ const Content = styled.div`
     background: transparent;
     color: white;
   }
+  display: flex;
+  flex-direction: column;
 `
 
 const Title = styled.span`
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 6px;
 `
 
-const Date = styled.p`
+const Subtitle = styled.span`
   font-size: 14px;
+  margin-bottom: 6px;
 `
 
-const Description = styled.p`
+const Description = styled.span`
   font-size: 16px;
 `
 
-
-
 const Card = ({copyright, date, descrip, title}) =>  {
-return(
+  return(
     <CardWrapper>
         <Content>
             {title && <Title>{title}</Title>}
-            {date && <Date>{date}</Date>}
-            {copyright && <Date>{copyright}</Date>}
+            {date && <Subtitle>{date}</Subtitle>}
+            {copyright && <Subtitle>{copyright}</Subtitle>}
             {descrip && <Description>{descrip}</Description>} 
         </Content>
     </CardWrapper>
-
-)
-  
-
+  )
 }
 
 Card.propTypes = {
@@ -57,12 +56,7 @@ Card.propTypes = {
     date: PropTypes.string,
     descrip: PropTypes.string,
     title: PropTypes.string
-  };
+};
   
-
-  
-
-
-
 
 export default Card;
