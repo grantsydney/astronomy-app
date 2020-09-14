@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 const CardWrapper = styled.div`
   position: relative;
-  background: linear-gradient(to right, #1778D0, #003B70);
+  background: linear-gradient(to right, #9462CB, #4B2278);
   padding: 1px;
 `
 
 
 const Content = styled.div`
-  background: white;
+  background: #FFFFFF;
   margin: 2px;
   padding: 2px;
   overflow: hidden;
@@ -50,6 +51,14 @@ return(
   
 
 }
+
+Card.propTypes = {
+    copyright: PropTypes.string,
+    date: PropTypes.string,
+    descrip: PropTypes.string,
+    title: PropTypes.string
+  };
+  
 
   
 

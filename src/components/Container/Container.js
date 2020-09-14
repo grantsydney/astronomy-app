@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
-import PropTypes from 'prop-types';
 import Heading from '../Heading'
 import Card from '../Card/Card'
 import ReactPlayer from "react-player"
@@ -63,30 +62,17 @@ const Container = ({ header }) => {
       return <div>Loading...</div>;
     } else {
       return (
-
-          <div>
-    {console.log(item)}
-
-
-  <Heading header={header}/>
-  {item.media_type !== 'video' && renderImg(item.url)}
-  {item.media_type === 'video' && renderVideo(item.url)}
-  <CardContainer>
-    <Card title={item?.title} date={item?.date} descrip={item?.explanation} copyright={item?.copyright}/>
-  </CardContainer>
-
-   
-   
-        </div>
+        <div>
+          <Heading header={header}/>
+          {item.media_type === 'image' && renderImg(item.url)}
+          {item.media_type === 'video' && renderVideo(item.url)}
+          <CardContainer>
+            <Card title={item?.title} date={item?.date} descrip={item?.explanation} copyright={item?.copyright}/>
+          </CardContainer>
+      </div>
       );
     }
   }
-
-
-Container.propTypes = {
-  header: PropTypes.string
-};
- 
 
 
 export default Container;
