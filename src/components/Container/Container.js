@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
-import Heading from '../Heading'
+import Heading from '../Heading/Heading'
 import Card from '../Card/Card'
 import ReactPlayer from "react-player"
 
@@ -22,7 +22,7 @@ const Video = styled.div`
 
 `
 
-const Container = ({ header }) => {
+const Container = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [item, setItems] = useState([]);
@@ -63,7 +63,7 @@ const Container = ({ header }) => {
     } else {
       return (
         <div>
-          <Heading header={header}/>
+          <Heading />
           {item.media_type === 'image' && renderImg(item.url)}
           {item.media_type === 'video' && renderVideo(item.url)}
           <CardContainer>

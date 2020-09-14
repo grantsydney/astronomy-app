@@ -1,12 +1,12 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Container from '../Container/Container'
+import Container from './Container'
 
 
 const mockData = {
-        title: "Joni Baez",
-        date: "32",
-        explanation: "123, Charming Avenue"
+        title: "some title..",
+        date: "09-12-2020",
+        explanation: "aaaa lllooonnnggg dddeeesssccrriippttiioonn"
 };
 
 const mockFetch = (mockData) => {
